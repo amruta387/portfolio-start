@@ -1,0 +1,209 @@
+:root{
+    --bgcolor: black;
+    --textcolor: white;
+    --chngebgcolor:red;
+    --samesizenum: 20px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "ubuntu";
+    font-size: var(--samesizenum);
+}
+/*********************** HOME PAGE ****************************/
+/*********************** Header ****************************/
+nav{
+    background: var(--bgcolor);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+label.logo{
+    color: var(--textcolor);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-style: italic;
+}
+nav ul{
+    display: flex;
+    gap: var(--samesizenum);
+}
+nav ul li{
+    font-size: var(--samesizenum);
+}
+
+nav ul li a.menubar{
+    color: var(--textcolor);
+    padding: 10px;
+    border-radius: 0 5px;
+    text-transform: uppercase;
+}
+a.menubar:hover{
+    background: var(--chngebgcolor);
+    font-weight: bolder;
+    transition: 0.3s ease;
+
+}
+
+section.container{
+    display: flex;
+    margin: 80px 300px;
+    justify-content: center;
+}
+section div{
+    padding: 50px;
+}
+
+/*********************** ABOUT PAGE ****************************/
+
+.aboutMe{
+    text-align: center;
+    
+}
+
+.table_content{
+    padding: 80px;
+    margin: auto;
+}
+
+.image_ani{
+    text-align: center;
+}
+
+@keyframes colorChange {
+    0% {
+        fill: red;
+    }
+    50% {
+        fill: yellow;
+    }
+    100% {
+        fill: green;
+    }
+}
+
+  /* Apply animation to the circle */
+    #circle {
+        animation: colorChange 3s infinite alternate;
+    }
+
+     /* Animating the cloud to move horizontally */
+    .cloud {
+        width: 300px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        animation: moveCloud 10s linear infinite;
+    }
+
+      /* Keyframes for cloud animation */
+    @keyframes moveCloud {
+        0% {
+          transform: translateX(-300px); /* Start off the screen */
+        }
+        100% {
+          transform: translateX(1000px); /* End off the screen */
+        }
+    }
+
+
+
+
+/*********************** Footer ****************************/
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*********************** PROJECTS PAGE ****************************/
+
+.phead{
+    text-align: center;
+}
+/*.wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px;
+    grid-gap: 80px;
+    background-color: #fff;
+    color: #444;
+    margin: 100px;
+}
+*/
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: var(--samesizenum);
+    padding: var(--samesizenum);
+}
+
+.box {
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    border-radius: 5px;
+    padding: var(--samesizenum);
+    font-size: 150%;
+}
+
+
+@media (max-width: 768px) {
+    
+    .wrapper {
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    }
+
+    
+    h1 {
+        font-size: 2em;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .wrapper {
+        grid-template-columns: 1fr; 
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/*********************** CONTACT PAGE ****************************/
+
+.contact{
+    text-align: center;
+    padding: var(--samesizenum);
+}
+.container1{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contact-wrapper{
+    display: flex;
+    padding: 50px 100px;
+}
+.contact-form{
+    text-align: left;
+}
+form input,textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px
+}

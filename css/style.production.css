@@ -1,0 +1,260 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    font-family: "ubuntu";
+    font-size: 20px;
+}
+/*********************** HOME PAGE ****************************/
+/*********************** Header ****************************/
+nav{
+    background: black;
+    height: 80px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 100px;
+}
+label.logo{
+    color: white;
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+    font-style: italic;
+}
+nav ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+}
+nav ul li{
+    font-size: 20px;
+}
+
+nav ul li a.menubar{
+    color: white;
+    padding: 10px;
+    border-radius: 0 5px;
+    text-transform: uppercase;
+}
+a.menubar:hover{
+    background: red;
+    font-weight: bolder;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    transition: 0.3s ease;
+
+}
+
+section.container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 80px 300px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+section div{
+    padding: 50px;
+}
+
+/*********************** ABOUT PAGE ****************************/
+
+.aboutMe{
+    text-align: center;
+    
+}
+
+.table_content{
+    padding: 80px;
+    margin: auto;
+}
+
+.image_ani{
+    text-align: center;
+}
+
+@-webkit-keyframes colorChange {
+    0% {
+        fill: red;
+    }
+    50% {
+        fill: yellow;
+    }
+    100% {
+        fill: green;
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        fill: red;
+    }
+    50% {
+        fill: yellow;
+    }
+    100% {
+        fill: green;
+    }
+}
+
+  /* Apply animation to the circle */
+    #circle {
+        -webkit-animation: colorChange 3s infinite alternate;
+                animation: colorChange 3s infinite alternate;
+    }
+
+     /* Animating the cloud to move horizontally */
+    .cloud {
+        width: 300px;
+        height: 200px;
+        display: block;
+        margin: 0 auto;
+        -webkit-animation: moveCloud 10s linear infinite;
+                animation: moveCloud 10s linear infinite;
+    }
+
+      /* Keyframes for cloud animation */
+    @-webkit-keyframes moveCloud {
+        0% {
+          -webkit-transform: translateX(-300px);
+                  transform: translateX(-300px); /* Start off the screen */
+        }
+        100% {
+          -webkit-transform: translateX(1000px);
+                  transform: translateX(1000px); /* End off the screen */
+        }
+    }
+    @keyframes moveCloud {
+        0% {
+          -webkit-transform: translateX(-300px);
+                  transform: translateX(-300px); /* Start off the screen */
+        }
+        100% {
+          -webkit-transform: translateX(1000px);
+                  transform: translateX(1000px); /* End off the screen */
+        }
+    }
+
+
+
+
+/*********************** Footer ****************************/
+footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+
+/*********************** PROJECTS PAGE ****************************/
+
+.phead{
+    text-align: center;
+}
+/*.wrapper {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px;
+    grid-gap: 80px;
+    background-color: #fff;
+    color: #444;
+    margin: 100px;
+}
+*/
+.wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+
+@media (max-width: 768px) {
+    
+    .wrapper {
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    }
+
+    
+    h1 {
+        font-size: 2em;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .wrapper {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr; 
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/*********************** CONTACT PAGE ****************************/
+
+.contact{
+    text-align: center;
+    padding: 20px;
+}
+.container1{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contact-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 50px 100px;
+}
+.contact-form{
+    text-align: left;
+}
+form input,textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 10px
+}
